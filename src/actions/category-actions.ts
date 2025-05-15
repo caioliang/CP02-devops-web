@@ -1,9 +1,10 @@
 import { redirect } from "next/navigation"
 
-const API_URL = "http://localhost:8080/categories"
+const API_URL_NETWORK = "http://caioliang-cp02-api:8080/categories"
+const API_URL = 'http://localhost:8080/categories'
 
 export async function getCategories() {
-    const response = await fetch(API_URL)
+    const response = await fetch(API_URL_NETWORK)
     return await response.json()
 }
 
